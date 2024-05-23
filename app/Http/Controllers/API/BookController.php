@@ -9,13 +9,16 @@ use Symfony\Component\HttpKernel\Exception\HttpException;
 use App\Models\Book;
 use OpenApi\Annotations as OA;
 
+
 /**
  * Class Controller,
  * 
  * @author Dareen <dareen.422023008@civitas.ukrida.ac.id>
  */
+
 class BookController extends Controller
 {
+
     /** 
      * @OA\Get(
      *     path="/api/books",
@@ -33,6 +36,7 @@ class BookController extends Controller
     {
         return Book::get();
     }
+
 
 
     /**
@@ -64,6 +68,7 @@ class BookController extends Controller
      *     )
      * )
      */
+
 
     public function store(Request $request)
     {
@@ -119,6 +124,7 @@ class BookController extends Controller
      * )
      */
 
+
     public function show($id)
     {
         $book = Book::find($id);
@@ -127,6 +133,7 @@ class BookController extends Controller
         }
         return $book;
     }
+
 
     /**
      * @OA\Put(
