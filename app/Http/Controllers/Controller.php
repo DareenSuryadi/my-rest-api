@@ -17,12 +17,8 @@ use OpenApi\Annotations as OA;
      *      name="Dareen Eliezer Suryadi",
      *      email="dareen.422023008@civitas.ukrida.ac.id"
      * ),
-     * 
-     * 
-     * 
      * )
      */
-
 abstract class Controller
 {
     
