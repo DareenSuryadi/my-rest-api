@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\API\AuthController;
-use App\Http\Controllers\API\BookController;
+use App\Http\Controllers\API\ArtController;
 use Illuminate\Support\Facades\Route;
 
 Route::prefix('user')->group(function(){
@@ -15,14 +15,14 @@ Route::prefix('user')->group(function(){
     Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:api');
 });
 
-Route::resource('book', BookController::class, [
+Route::resource('art', ArtController::class, [
     'only'=>[
         'index',
         'show'
     ]
 ]);
 
-Route::resource('book', BookController::class, [
+Route::resource('art', ArtController::class, [
     'except'=>[
         'index',
         'show'

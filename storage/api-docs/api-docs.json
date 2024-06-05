@@ -143,10 +143,10 @@
                 ]
             }
         },
-        "/api/book": {
+        "/api/art": {
             "get": {
                 "tags": [
-                    "book"
+                    "art"
                 ],
                 "summary": "Display a listing of the items",
                 "operationId": "index",
@@ -163,7 +163,7 @@
             },
             "post": {
                 "tags": [
-                    "book"
+                    "art"
                 ],
                 "summary": "Store a newly created item",
                 "operationId": "store",
@@ -173,17 +173,18 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/Book"
+                                "$ref": "#/components/schemas/Art"
                             },
                             "example": {
                                 "id": 1,
-                                "title": "Eating Clean",
-                                "author": "Inge Tumiwa-Bachrens",
-                                "publisher": "Kawan Pustaka",
-                                "publication_year": "2016",
+                                "art_name": "Path to Spring",
+                                "artist": "Paul",
+                                "techniques": "Oil on canvas",
+                                "type": "Portrait",
+                                "size": "45 x 33 cm",
                                 "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1482170055i/33511107.jpg",
-                                "description": "Menjadi sehat adalah impian semua orang. Makanan yang selama ini kita pikir sehat ternyata belum tentu 'sehat' bagi tubuh kita.",
-                                "price": 85000
+                                "description": "Path to Spring is a special art painted by Paul",
+                                "price": 200
                             }
                         }
                     }
@@ -214,10 +215,10 @@
                 ]
             }
         },
-        "/api/book/{id}": {
+        "/api/art/{id}": {
             "get": {
                 "tags": [
-                    "book"
+                    "art"
                 ],
                 "summary": "Display the specified item",
                 "operationId": "show",
@@ -262,7 +263,7 @@
             },
             "put": {
                 "tags": [
-                    "book"
+                    "art"
                 ],
                 "summary": "Update the specified item",
                 "operationId": "update",
@@ -284,17 +285,18 @@
                     "content": {
                         "application/json": {
                             "schema": {
-                                "$ref": "#/components/schemas/Book"
+                                "$ref": "#/components/schemas/Art"
                             },
                             "example": {
                                 "id": 1,
-                                "title": "Eating Clean",
-                                "author": "Inge Tumiwa-Bachrens",
-                                "publisher": "Kawan Pustaka",
-                                "publication_year": "2016",
+                                "art_name": "Path to Spring",
+                                "artist": "Paul",
+                                "techniques": "Oil on canvas",
+                                "type": "Portrait",
+                                "size": "45 x 33 cm",
                                 "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1482170055i/33511107.jpg",
-                                "description": "Menjadi sehat adalah impian semua orang. Makanan yang selama ini kita pikir sehat ternyata belum tentu 'sehat' bagi tubuh kita.",
-                                "price": 85000
+                                "description": "Path to Spring is a special art painted by Paul",
+                                "price": 200
                             }
                         }
                     }
@@ -334,7 +336,7 @@
             },
             "delete": {
                 "tags": [
-                    "book"
+                    "art"
                 ],
                 "summary": "Remove the specified item",
                 "operationId": "destroy",
@@ -387,15 +389,15 @@
     },
     "components": {
         "schemas": {
-            "Book": {
-                "title": "Book model",
-                "description": "Book model",
+            "Art": {
+                "title": "Art model",
+                "description": "Art model",
                 "required": [
-                    "title",
-                    "author"
+                    "art_name",
+                    "type"
                 ],
                 "xml": {
-                    "name": "Book"
+                    "name": "Art"
                 }
             },
             "User": {
