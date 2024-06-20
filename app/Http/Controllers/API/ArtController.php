@@ -94,8 +94,8 @@ class ArtController extends Controller
             if($request->get('_search')){
                 $data['products'] = $data['products']->whereRaw('(LOWER(art_name) LIKE "%'.strtolower($request->get('_search')).'%" OR LOWER(artist) LIKE "%'.strtolower($request->get('_search')).'%")');
             }
-            if($request->get('_artist')){
-                $data['products'] = $data['products']->whereRaw('LOWER(artist) = "'.strtolower($request->get('_artist')).'"');
+            if($request->get('_type')){
+                $data['products'] = $data['products']->whereRaw('LOWER(type) = "'.strtolower($request->get('_type')).'"');
             }
             if($request->get('_sort_by')){
             switch ($request->get('_sort_by')) {
@@ -153,14 +153,14 @@ class ArtController extends Controller
      *         description="Request body description",
      *         @OA\JsonContent(
      *             ref="#/components/schemas/Art",
-     *             example={"art_name": "Path to Spring",
-     *                      "artist": "Paul",
-     *                      "techniques": "Oil on canvas",
-     *      *               "type": "Portrait",
-     *                      "size": "45 x 33 cm",
-     *                      "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1482170055i/33511107.jpg",
-     *                      "description": "Path to Spring is a special art painted by Paul",
-     *                      "price": 200}
+     *             example={"art_name": "Lady in Red",
+     *                      "artist": "Keishia Coleridge",
+     *                      "techniques": "Acrylic on canvas",
+     *      *               "type": "Landscape",
+     *                      "size": "56 x 38 cm",
+     *                      "cover": "https://cdn.dribbble.com/userupload/8454524/file/original-8cb054c3d0c7179504a2fb65ca6833f8.jpg?resize=752x551",
+     *                      "description": "A red-dressed mysterious lady",
+     *                      "price": 400}
      *         ),
      *     ),
      *      security={{"passport_token_ready":{}, "passport":{}}}
@@ -269,14 +269,14 @@ class ArtController extends Controller
      *         description="Request body description",
      *         @OA\JsonContent(
      *             ref="#/components/schemas/Art",
-     *             example={"art_name": "Path to Spring",
-     *                      "artist": "Paul",
-     *                      "techniques": "Oil on canvas",
-     *      *               "type": "Portrait",
-     *                      "size": "45 x 33 cm",
-     *                      "cover": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1482170055i/33511107.jpg",
-     *                      "description": "Path to Spring is a special art painted by Paul",
-     *                      "price": 200}
+     *             example={"art_name": "Lady in Red",
+     *                      "artist": "Keishia Coleridge",
+     *                      "techniques": "Acrylic on canvas",
+     *      *               "type": "Landscape",
+     *                      "size": "56 x 38 cm",
+     *                      "cover": "https://cdn.dribbble.com/userupload/8454524/file/original-8cb054c3d0c7179504a2fb65ca6833f8.jpg?resize=752x551",
+     *                      "description": "A red-dressed mysterious lady",
+     *                      "price": 400}
      *         ),
      *     ),
      *      security={{"passport_token_ready":{}, "passport":{}}}

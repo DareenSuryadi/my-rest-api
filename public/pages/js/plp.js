@@ -26,9 +26,9 @@ function getData(toPage=1){
             (response.data.products).forEach((item) => {
                 template += `   <div class="col-lg-3 col-md-4 col-sm-6">
                                     <div class="single-product-item text-center">
-                                        <div class="products-images">
+                                        <div class="products-images" style="display: flex; align-items: center; justify-content: center; height: 300px;">
                                             <a href="/art/`+item.id+`" class="product-thumbnail">
-                                                <img src="`+item.cover+`" alt="Product Images" height="300">
+                                                <img src="`+item.cover+`" alt="Product Images">
                                             </a>
                                             <div class="product-actions">
                                                 <a href="/art/`+item.id+`"><i class="p-icon icon-plus"></i><span class="tool-tip">Quick View</span></a>

@@ -28,7 +28,7 @@ function getDataByWindowUrlKey(){
           template += '<i class="'+(index<stars?'yellow':'')+' icon_star"></i>';
         }
         $('#product-review-stars').html(template);
-        $('#product-review-body-count').html(randomIntFromInterval(1,1000)+' customer review');
+        $('#product-review-body-count').html(randomIntFromInterval(1,100)+' viewer ratings');
         // status stock
         let statusStock = randomIntFromInterval(0,1);
         $('#product-status-stock').addClass(statusStock?'in-stock':'out-of-stock');

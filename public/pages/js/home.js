@@ -21,7 +21,7 @@ function getData(){
                             <div class="hero-content-wrap">
                                 <div class="hero-text-7 mt-lg-5">
                                     <h6 class="mb-20">
-                                        Latest from WTTW
+                                        Latest from Art Gallery
                                     </h6>
                                     <h1>`+breakWord(item.art_name)+`</h1>
 
